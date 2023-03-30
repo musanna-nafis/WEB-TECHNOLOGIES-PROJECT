@@ -1,0 +1,98 @@
+<?php
+session_start();
+
+
+if(!isset($_SESSION["username"]) || !isset($_SESSION["password"]))
+{
+    header("Location:login_view.php");
+}
+
+if(isset($_SESSION["username"])  && isset($_SESSION["password"]))
+{
+    if($_SESSION["user_type"]=='admin')
+    {
+        header("Location:admin_homepage_view.php");
+    }
+    else if($_SESSION["user_type"]=='teacher')
+    {
+      
+        if($_SESSION["designation"]=="Director")
+        {
+            header("Location:teacher_director_homepage_view.php");
+        }
+        else 
+        {
+            header("Location:teacher_homepage_view.php");
+        }
+
+    }
+    else if($_SESSION["user_type"]=="student")
+    {
+		
+    }
+    else
+    {
+
+    }
+}
+
+?>
+<html>
+<head>
+    <title>Student/Home</title>
+    <link rel="stylesheet" type="text/css" href="../css/student/student.css">
+</head>
+
+<body>
+<h1 class="xyz">XYZ University Portal</h1>  
+<div class="sticky">
+<div class="topnav">
+  <a href="#"> <td> <a href="../view/student_homepage_view.php">Home</a></td></a>
+  <a href="#"><a href="../control/student_viewprofile_control.php">View Profile</a>
+  <a href="#"><a href="../view/student_settings_view.php">Settings</a>
+  <b><a href="../control/student_logout_control.php"target="_blank">Logout</a><b>
+ </div> </div>
+<div class="header">
+<h1><?php echo "<h2>Welcome ".$_SESSION["username"]."</h2>";?>
+
+  </div>
+ 
+ <div class="lBorder" >
+ <div class="academics"><h3>Borrow Book</h3></div>
+</div>
+<form action="" method="POST">
+<body>
+Book
+
+<select>
+<option>C++ Primer 5th Edition</option>
+<option>JavaScript: The Good Parts</option>   
+
+<option>Foundation Html5 with Css3</option>
+<option>Introduction to Algorithms</option>
+<option>C++ Pocket Reference 1st Edition</option>
+<option>Clean Code</option>
+<option>Head First Java</option>
+
+</select>
+ISBN
+<select>
+<option > 978-3-16-148410-0</option>
+<option > 978-3-16-148410-1</option>
+<option > 978-3-16-148410-1</option>
+<option > 978-3-16-148410-3</option>
+<option > 978-3-16-148410-4</option>
+<option > 978-3-16-148410-5</option>
+<option > 978-3-16-148410-6</option>
+</select>
+
+<input type="submit" class="selectbutton" value="Request">
+
+
+
+
+
+</form>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+body{
+    background-color:  #ccffff ;
+}
+#vname
+{
+    text-align: center;}
+
+div.sticky {
+    top: 0;
+    padding: 2px;
+    margin: 0;
+    position: sticky;
+    }
+.topnav {
+    overflow: hidden;
+    text-align: center;
+    background-color: #00cc99;
+    font-size: 100%;
+        }
+        .topnav a{
+        background-color: #00cc99;
+        display: block;
+        float: left;
+        color: #f2f2f2;
+        padding-right: 14px 16px;
+        text-decoration: none;
+        
+        }
+        .topnav b{
+          background-color: #00cc99;
+          display: block;
+          float: right;
+          color: #f2f2f2;
+          padding-right: 14px 16px;
+          text-decoration: none;
+          }
+
+
+
+
+
+.p3 {
+font-family: "Lucida Console", "Courier New", monospace;
+}
+#myfavourite
+{
+    color: white;
+}
+
+#academic
+{
+    color: #0099cc;
+}
+
+.academics
+{ color: #FFFFFF;
+    text-decoration: none;
+  width: 290px;
+  border-left: #333300;
+  padding: 2px;
+  margin: 2px;
+  font-size: 100%;
+ 
+}
+
+.academicsitem
+{
+  
+    color: #FFFFFF;
+    text-decoration: none;
+ background-color: #00cc99;
+ display: block;
+ font-size: 100%;
+
+}
+
+ol.c {
+    list-style-type: upper-roman;
+  }
+  /* display: block;
+    padding: 8px 16px;
+    font-size: 100%;
+    background-color: #555;
+    color: white;
+    text-decoration: none; */
+    a {
+  
+        color: #FFFFFF;
+    text-decoration: none;}
